@@ -1,0 +1,121 @@
+.chat {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.messages {
+    flex: 1; /* Allow messages to take available space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll; /* Enable scrolling for overflow */
+    padding: 10px; /* Add padding for spacing */
+}
+
+.messages h1 {
+    font-weight: 300;
+}
+
+.message {
+    background-color: white;
+    padding: 10px; /* Reduced padding to allow more text space */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    word-wrap: break-word; /* Allow long words to break and wrap to next line */
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message span {
+    font-weight: bold;
+}
+
+.chatBox {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px; /* Add padding for spacing */
+    flex: 1;
+}
+
+.top {
+    background-color: #fece51;
+    padding: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.center {
+    height: 350px;
+    overflow: scroll;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .chatMessage {
+        width: auto; /* Auto width to take available space */
+        max-width: 100%; /* Ensure it doesn’t overflow */
+        &.own {
+            align-self: flex-end;
+            text-align: right;
+        }
+        span {
+            font-size: 12px;
+            padding: 2px;
+            border-radius: 5px;
+            word-wrap: break-word; /* Ensure text wraps properly */
+        }
+    }
+}
+
+.bottom {
+    border-top: 2px solid #fece51;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    textarea {
+        flex: 3;
+        height: 100%;
+        border: none;
+        padding: 20px;
+        resize: none; /* Prevent resizing */
+    }
+    button {
+        flex: 1;
+        background-color: #f7c14b85;
+        height: 100%;
+        border: none;
+        cursor: pointer;
+    }
+}

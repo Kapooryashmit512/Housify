@@ -1,0 +1,32 @@
+.listPage {
+    display: flex;
+    height: 100%; /* Ensure it takes up the full viewport height */
+    //overflow: hidden; /* Prevents content overflow */
+
+    .listContainer {
+        flex: 3;
+        //display: flex;
+        //flex-direction: column;
+        overflow-y: auto; /* Allows scrolling within this container */
+        //padding-right: 20px; /* Adjust padding as necessary */
+
+        .wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding-right: 50px;
+            overflow-y: scroll;
+            padding-bottom: 50px;
+
+        }
+    }
+
+    .mapContainer {
+        flex: 2;
+        height: 100%;
+
+        background-color: #fcf5f3;
+        /* Prevents overflow issues */
+    }
+}
